@@ -58,7 +58,7 @@ Therefore,  we can register a user such as adminadmin/123456:
 
 ![Registration](images/web_idoriotrevenge1.png)
 
-Then, we set `user_id`` GET paramter to `'php'` to obtain flag:
+Then, we set `user_id` GET paramter to `'php'` to obtain flag:
 
 ![Change user_id](images/web_idoriotrevenge2.png)
 
