@@ -83,3 +83,7 @@ print(d)
 ptxt = pow(c, d, n)
 print(bytes.fromhex(hex(ptxt)[2:]))
 ```
+
+## Flag
+
+amateursCTF{harder_than_3_operations?!?!!}
