@@ -1,0 +1,78 @@
+# Crypto - RSA (Imaginary CTF 2023)
+
+## Problem
+
+We are given 3 files to find the flag:
+
+public.pem:
+```
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJTzEROqf1384i18XiqfglU1Vu
+CqQJaqhmiMGA3zNHLBojFklLfe3cxDwdJMolmbdL//qUc0y9yGYSbLUURleS8VMC
+bWkhtI1SCCxAxkqbRSgWIeScd8+ed4JOUXfwTX2nCgO1Pxp1XbeDqba4nnR/agb1
+d6/4ciyo6w5bz0OcIwIDAQAB
+-----END PUBLIC KEY-----
+```
+
+private.pem:
+```
+-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQDJTzEROqf1384i18XiqfglU1VuCqQJaqhmiMGA3zNHLBojFklL
+fe3cxDwdJMolmbdL//qUc0y9yGYSbLUURleS8VMCbWkhtI1SCCxAxkqbRSgWIeSc
+d8+ed4JOUXfwTX2nCgO1Pxp1XbeDqba4nnR/agb1d6/4ciyo6w5bz0OcIwIDAQAB
+AoGAOw2hDjXPuZ/an3v+j7xej8x/XhV/A0gneFSbtwtCxpkYXbyW6a9aTI3AOKhn
+KFqMW54Oyud71pxn3PXItNbhrzJLgNhEYrz4N423gDxM7HgqeYogi6XTc0qVh8rB
+fnb7s8JB5bGCLKs5tz2zQ99IYHhjQ8LXeMCwbvSaKSLqQqkCQQD+r7yXzewBv1r+
+ir4oAtj07iF8Y3QMiHxykgQxEI6ZPcbzz+7WpBgwQ1z6nMCNJuAfs9/Fxt+DpIjo
+3z2JdittAkEAylj7In1hwaA3s3L1SPME5GTqvqTcbtvKhPlrWJ7Ci4N/VU+zByM0
+BpsYHFo5cRvFOxFlHDIZ4APLn+Wrs2obzwJADWBJdWeZR5Y3PzsmNY/AuUxwccn/
+ZFEeyB2nHrSR6LZ35oI7NwazRoWjMn5dFoy+JKwbypVhU9amYiSnZLrSGQJAOxCC
+Le0fbd+Qosb5plOZp/l1NDT3SzzI/su3c+TTsNmvf32GKp0yAIOhJBWKEuQiTD2l
+n/dX6jXxaDkoR3S/rQJAd+rO4KvBwxurYGGYpN0vGHSJPPmVLyNxPRmyFYcC5CU/
+5Z3FWqN+4eFPtujWig2gfkZ/SL3QuB3s5BG0dWN0gA==
+-----END RSA PRIVATE KEY-----
+```
+
+flag.enc (base64 here for your reading convenience only):
+```
+xRdcVrCV6FEmSUHv7wMWx0JWFZ1v/cuLQdcwMliGVQGQjcJfNRy0N7NChM4HVLfHIPHKSK4NBVAolM3IVYOxiygquIcVO0oB5K3D5ADDrQ6wILomWr/1n/bJL5BJCWQoQm7u5aPJWLzLoSjgmYzepUJXwfaeOCUrB3q2coNjhWo=
+```
+
+## Solution
+
+We can obtain all required RSA values from `private.pem`:
+
+```sh
+$ openssl rsa -inform PEM -text -noout < private.pem 
+Private-Key (1024 bit, 2 primes)
+modulus
+00c94f31113aa7f5dfce22d7c5e2a9f82553556e0aa4096aa86688c180df33472c1a2316494b7deddcc43c1d24ca2599b74bfffa94734cbdc866126cb514465792f153026d6921b48d52082c40c64a9b45281621e49c77cf9e77824e5177f04d7da70a03b53f1a755db783a9b6b89e747f6a06f577aff8722ca8eb0e5bcf439c23
+public
+Exponent 65537 (0x10001)
+privateExponent
+3b0da10e35cfb99fda9f7bfe8fbc5e8fcc7f5e157f03482778549bb70b42c699185dbc96e9af5a4c8dc038a867285a8c5b9e0ecae77bd69c67dcf5c8b4d6e1af324b80d84462bcf8378db7803c4cec782a798a208ba5d3734a9587cac17e76fbb3c241e5b1822cab39b73db343df4860786343c2d778c0b06ef49a2922ea42a9
+prime1
+00feafbc97cdec01bf5afe8abe2802d8f4ee217c63740c887c72920431108e993dc6f3cfeed6a41830435cfa9cc08d26e01fb3dfc5c6df83a488e8df3d89762b6d
+prime2
+00ca58fb227d61c1a037b372f548f304e464eabea4dc6edbca84f96b589ec28b837f554fb3072334069b181c5a39711bc53b11651c3219e003cb9fe5abb36a1bcf
+exponent1
+0d60497567994796373f3b26358fc0b94c7071c9ff64511ec81da71eb491e8b677e6823b3706b34685a3327e5d168cbe24ac1bca956153d6a66224a764bad219
+exponent2
+3b10822ded1f6ddf90a2c6f9a65399a7f9753434f74b3cc8fecbb773e4d3b0d9af7f7d862a9d320083a124158a12e4224c3da59ff757ea35f16839284774bfad
+coefficient
+77eacee0abc1c31bab606198a4dd2f1874893cf9952f23713d19b2158702e4253fe59dc55aa37ee1e14fb6e8d68a0da07e467f48bdd0b81dece411b475637480```
+```
+
+We can now use a small python script to recover the flag:
+
+```python
+n=int('00c94f31113aa7f5dfce22d7c5e2a9f82553556e0aa4096aa86688c180df33472c1a2316494b7deddcc43c1d24ca2599b74bfffa94734cbdc866126cb514465792f153026d6921b48d52082c40c64a9b45281621e49c77cf9e77824e5177f04d7da70a03b53f1a755db783a9b6b89e747f6a06f577aff8722ca8eb0e5bcf439c23', 16)
+e = 65537
+d = int('3b0da10e35cfb99fda9f7bfe8fbc5e8fcc7f5e157f03482778549bb70b42c699185dbc96e9af5a4c8dc038a867285a8c5b9e0ecae77bd69c67dcf5c8b4d6e1af324b80d84462bcf8378db7803c4cec782a798a208ba5d3734a9587cac17e76fbb3c241e5b1822cab39b73db343df4860786343c2d778c0b06ef49a2922ea42a9', 16)
+ct = int(open('flag.enc', 'rb').read().hex(), 16)
+print(bytes.fromhex(hex(pow(ct, d, n))[2:]))
+```
+
+## Flag
+
+ictf{keep_your_private_keys_private}
