@@ -33,7 +33,7 @@ Step 2 - The check for `V` is as follows:
 
 ![Volcano value Check](images/rev_volcano2.png)
 
-Observe that a value needs to be 18 to 26 bits to be considered a volcano.
+Observe that a value needs to have between 18 to 26 bits (inclusive) set to '1' to be considered a volcano.
 
 Step 3 - The check for `B` being same as `V` via `P` is as follows:
 
