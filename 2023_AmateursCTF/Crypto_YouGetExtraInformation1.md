@@ -1,0 +1,78 @@
+# Crypto - You get extra information 1
+
+## Problem
+
+RSA question with extra information provided:
+
+```python
+from Crypto.Util.number import *
+from flag import flag
+
+p = getPrime(512)
+q = getPrime(512)
+n = p*q
+p = p + q
+e = 0x10001
+
+extra_information = p + q
+ptxt = bytes_to_long(flag)
+c = pow(ptxt, e, n)
+
+with open('output.txt', 'w') as f:
+    f.write(f"n: {n}\nc: {c}\ne: {e}\nextra_information: {extra_information}")
+```
+
+## Solution
+
+We observe that the extra information, labelled `z`, provided is `p + 2q`. Consider this:
+
+```
+f(x)  
+= (x - p)(x - 2q)
+= x**2 - px - 2qx + 2pq
+= x**2 - (p + 2q)x + 2pq
+= x**2 - zx + 2n
+```
+
+Solving for `f(x)=0` for the quadratic formula give us the roots of `f(x)`, and the values of `p` and `2q` (and therefore `q`). Once `p` and `q` are obtained, we can recompute the private value `d` to obtain flag. For the solve script, I used a variant of the above idea to find `p` and `q`:
+
+```
+y**2
+= (p-2q)**2
+= p**2 - 4n + 4q**2
+
+y
+= sqrt((p + 2q)**2 - 8n)
+= z**2 - 8n
+
+p = (y + z)/2 = (p - 2q) + (p + 2q)
+q = (z - p) / 2
+```
+
+```python
+import math
+
+import gmpy2
+gmpy2.get_context().precision=2048
+# n = pq
+n=83790217241770949930785127822292134633736157973099853931383028198485119939022553589863171712515159590920355561620948287649289302675837892832944404211978967792836179441682795846147312001618564075776280810972021418434978269714364099297666710830717154344277019791039237445921454207967552782769647647208575607201
+c=55170985485931992412061493588380213138061989158987480264288581679930785576529127257790549531229734149688212171710561151529495719876972293968746590202214939126736042529012383384602168155329599794302309463019364103314820346709676184132071708770466649702573831970710420398772142142828226424536566463017178086577
+e=65537
+# extra_information = p + 2q
+extra=26565552874478429895594150715835574472819014534271940714512961970223616824812349678207505829777946867252164956116701692701674023296773659395833735044077013
+# (p+2q)^2 = p^2 + 4n + 4q^2 
+# (p-2q)^2 = p^2 - 4n + 4q^2 = sqrt((p + 2q)^2 - 8n) = extra^2 - 8n
+y2 = extra*extra - 8 * n
+print(y2, (extra*extra) - (8*n))
+y = gmpy2.sqrt(y2)
+q = int((extra + y) / 4)
+p = int(extra - 2 * q)
+# Verify p,q
+print(p, q, p * q == n)
+# Compute d
+d = int(pow(e, -1, (p - 1) * (q - 1)))
+print(d)
+# Find flag
+ptxt = pow(c, d, n)
+print(bytes.fromhex(hex(ptxt)[2:]))
+```
