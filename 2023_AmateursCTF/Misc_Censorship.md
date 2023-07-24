@@ -1,4 +1,4 @@
-# Misc - Censorship
+# Misc - Censorship (AmateursCTF 2023)
 
 ## Problem
 

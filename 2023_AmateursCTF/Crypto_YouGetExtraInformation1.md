@@ -1,4 +1,4 @@
-# Crypto - You get extra information 1
+# Crypto - You get extra information 1 (AmateursCTF 2023)
 
 ## Problem
 
