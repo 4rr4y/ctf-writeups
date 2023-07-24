@@ -9,7 +9,7 @@ Participated solo. Ranked 85 overall. Time constraints apply.
 | [Blurry](./Forensics_Blurry.md) | Forensics | - |
 | [Signpost](./Misc_Signpost.md) | Misc | - |
 | [Chaos](./Reversing_Chaos.md) | Reversing | - |
-| [Snailchecker](./Reversing_SnailChecker.md) | Reversing | Interesting question |
+| [Snailchecker](./Reversing_SnailChecker.md) | Reversing | Somewhat interesting question |
 | [Inspection](./Web_Inspection.md) | Web | - |
 | [Roks](./Web_Roks.md) | Web | - |
 | [Perfect Picture](./Web_PerfectPicture.md) | Web | - |
