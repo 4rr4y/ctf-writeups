@@ -86,7 +86,7 @@ CMD bash -c 'source /etc/apache2/envvars && APACHE_RUN_USER=user APACHE_RUN_GROU
 
 ```
 
-Given that there is a URL decode present when processing the file path for directory traversal, we find that eventually performing triple URL encoding to make it work (`'.' = %25252e, '/' = %25252f`):
+Given that there is a URL decode present when processing the file path for directory traversal, we find that eventually performing 'triple' URL encoding to make it work (`'.' = %25252e, '/' = %25252f`):
 
 ![Directory Traversal](images/web_roks1.png)
 

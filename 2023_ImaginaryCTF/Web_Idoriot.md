@@ -14,7 +14,7 @@ Observe that for the flag to display, we need `user_id=0`, which is the user ID 
 
 ![register.php POST request](images/web_idoriot2.png)
 
-Since `user_id` can be specified as POST data, we specify `user_id=0` for a new use registration to obtain the flag:
+Since `user_id` can be specified as POST data, we specify `user_id=0` for a new user registration to obtain the flag:
 
 ![register.php POST request](images/web_idoriot3.png)
 
