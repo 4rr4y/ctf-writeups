@@ -1,4 +1,4 @@
-# Rev - Chaos (Imaginary CTF 2023)
+# Reversing - Chaos (Imaginary CTF 2023)
 
 ## Problem
 

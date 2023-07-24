@@ -1,4 +1,4 @@
-# Rev - SnailChecker (Imaginary CTF 2023)
+# Reversing - SnailChecker (Imaginary CTF 2023)
 
 ## Problem
 
