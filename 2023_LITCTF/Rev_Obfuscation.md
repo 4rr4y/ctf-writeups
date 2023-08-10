@@ -126,7 +126,7 @@ eval(compile(AES_DECRYPT(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
 
 ## Solution
 
-The most important line is to find these lines:
+The most important thing is to find these lines:
 
 ```python
 from hashlib import sha256 as AES_INIT
