@@ -20,4 +20,4 @@ Participated solo. Ranked 58 overall. Time constraints apply.
 | [too much kirby](./Web_TooMuchKirby.md) | Web | - |
 | [unsecure](./Web_Unsecure.md) | Web | - |
 
-Writeups exclude both `HelloWorld` (Sanity Check) and `discord and more`, challenge solves.
+Writeups exclude both `HelloWorld` (Sanity Check) and `discord and more` challenge solves.
