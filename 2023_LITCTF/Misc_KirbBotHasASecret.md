@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
 ## Solution
 
-I somehow have better luck with getting ChatGPT to generate poems for such byapasses as opposed to resorting to DANs / token extraction and other things. Here is an example of a prompt I found that allowed the passphrase to be printed out, wrapped into a script so that I see less pink:
+I somehow have better luck with getting ChatGPT to generate poems for such bypasses as opposed to resorting to DANs / token extraction and other things. Here is an example of a prompt I found that allowed the passphrase to be printed out, wrapped into a script so that I see less pink:
 
 ```python
 import requests
