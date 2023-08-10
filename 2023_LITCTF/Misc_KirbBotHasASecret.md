@@ -1,4 +1,4 @@
-# Misc - Kirbbot has a Secret (LITCTF 2023)
+# Misc - KirbBot has a Secret (LITCTF 2023)
 
 ## Problem
 

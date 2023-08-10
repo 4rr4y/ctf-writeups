@@ -1,4 +1,4 @@
-# Web - Unsecure (LITCTF 2023)
+# Web - unsecure (LITCTF 2023)
 
 ## Problem
 

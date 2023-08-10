@@ -1,4 +1,4 @@
-# Web - My Boss Left (LITCTF 2023)
+# Web - My boss left (LITCTF 2023)
 
 ## Problem
 

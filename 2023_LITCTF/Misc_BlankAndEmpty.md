@@ -1,4 +1,4 @@
-# Misc - Kevin (LITCTF 2023)
+# Misc - Blank and Empty (LITCTF 2023)
 
 ## Problem
 

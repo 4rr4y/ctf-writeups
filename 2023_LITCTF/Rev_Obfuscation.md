@@ -1,4 +1,4 @@
-# Rev - Obfuscation (LITCTF 2023)
+# Rev - obfuscation (LITCTF 2023)
 
 ## Problem
 

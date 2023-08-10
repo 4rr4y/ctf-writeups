@@ -1,4 +1,4 @@
-# Web - Fetch (LITCTF 2023)
+# Web - fetch (LITCTF 2023)
 
 ## Problem
 

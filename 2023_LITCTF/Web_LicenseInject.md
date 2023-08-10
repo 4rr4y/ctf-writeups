@@ -1,4 +1,4 @@
-# Web - License Inject (LITCTF 2023)
+# Web - license-inject (LITCTF 2023)
 
 ## Problem
 

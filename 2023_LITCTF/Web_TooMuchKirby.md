@@ -1,4 +1,4 @@
-# Web - Unsecure (LITCTF 2023)
+# Web - too much kirby (LITCTF 2023)
 
 ## Problem
 

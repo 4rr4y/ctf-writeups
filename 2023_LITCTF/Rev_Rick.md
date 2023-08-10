@@ -1,4 +1,4 @@
-# Rev - Rick (LITCTF 2023)
+# Rev - rick (LITCTF 2023)
 
 ## Problem
 
