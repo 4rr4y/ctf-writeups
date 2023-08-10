@@ -7,7 +7,7 @@ Participated solo. Ranked 58 overall. Time constraints apply.
 | [amogus](./Misc_Amogus.md) | Misc | - |
 | [Blank And Empty](./Misc_BlankAndEmpty.md) | Misc | - |
 | [kevin](./Misc_Kevin.md) | Misc | - |
-| [KirbBot has a secret ...](./Misc_KirbbotHasASecret.md) | Misc | Prompt injection is interesting |
+| [KirbBot has a secret ...](./Misc_KirbBotHasASecret.md) | Misc | Prompt injection is interesting |
 | [obfuscation](./Rev_Obfuscation.md) | Rev | - |
 | [rick](./Rev_Rick.md) | Rev | - |
 | [My Pet Canary's Birthday Pie](./Pwn_MyPetCanarysBirthdayPie.md) | Pwn | - |
