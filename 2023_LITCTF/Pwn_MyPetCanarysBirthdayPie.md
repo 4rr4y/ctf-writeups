@@ -47,9 +47,9 @@ There are 2 vulnerabilities to take note. First, `printf(buf)` is vulnerable to 
 
 Relevant addresses for `win()` and `vuln()` are as follows:
 
-![win()](./images/mypetcanarysbirthdaypie1.png)
+![win()](./images/pwn_mypetcanarysbirthdaypie1.png)
 
-![vuln()](./images/mypetcanarysbirthdaypie2.png)
+![vuln()](./images/pwn_mypetcanarysbirthdaypie2.png)
 
 A solve script to do this is as follows:
 

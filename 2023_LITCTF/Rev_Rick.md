@@ -8,7 +8,7 @@ We are given a binary named `rick` to perform reverse engineering on.
 
 Analyzing the binary in Ghidra reveals the presence of the reverse flag:
 
-![Rick analysis](./images/rick1.png)
+![Rick analysis](./images/rev_rick1.png)
 
 The flag is therefore found as follows:
 
