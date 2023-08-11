@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 We only need provide the value of `$valid_password` as the password to get the flag:
 
-![Login with password](./images/mybossleft1.png)
+![Login with password](./images/web_mybossleft1.png)
 
 ## Flag
 
